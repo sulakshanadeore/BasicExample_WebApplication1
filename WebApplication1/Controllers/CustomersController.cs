@@ -42,5 +42,34 @@ namespace WebApplication1.Controllers
 
         }
 
+
+        [HttpPost]
+        public ActionResult Register(string name, string city, string email) {
+            if (name.Length>0 && city.Length>0 && email.Length>0)
+            {
+                return RedirectToAction("Cart");
+            }
+            else
+            {
+                return View();
+            }
+        
+        }
+
+
+        public ActionResult Cart()
+        {
+            return View();
+        
+        }
+
+        [HttpPost]
+        public ActionResult Cart(int id)
+        {
+            return RedirectToAction("ProductList", "Products");
+
+
+        }
+
     }
 }
