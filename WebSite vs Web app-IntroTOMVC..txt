@@ -1,0 +1,133 @@
+WebSite vs Web app.
+
+Website : is a collection of pages where the info is static about the products and company.(google(dot)com)
+WebApp: its dynamic in nature(amazon(dot)in
+
+
+Architectural Design Pattern used for Web Apps.
+
+
+MVC -- Model(Business Logic) View(UI) Controller(Request and Response)--Separation of Concerns
+MVP
+MVVM
+structural and behaviour.
+
+
+T1----> Database
+T2----> Programming--C# & Web
+T3----->Frontend
+----
+Asp.net MVC of asp.net
+asp.net is framework used for creating server side web apps to be hosted on IIS.(Internet Information Services).
+Event Driven Programming. every thing was server side programming
+
+Asp.net mvc ---> complete new write up over asp.net.
+Architecure----response/request(Revolves around Http Verbs). combination of server and client side
+
+Server side programming---> everything executes on the server.
+
+Revolves around Http Verbs
+
+1) GET(HttpGet)----> receiving existing data from the server
+2) PUT(HttpPut)----> updating the server(client--browser sending updation data to the server)
+3) POST(HttpPost)---->creating new record/data to be sent to the server
+4) DELETE(HttpDelete)----> removing/deleting a record/data from the server
+
+
+Request <-----  goes to the server
+Response-----> server sends a response to the clinet as a reply to the request.
+
+
+*Controller: IS the COP of the app
+*MODEL: holding the data between the request and the response.
+data can be single record or it can a collection of records
+*VIEW: display the data(UI) of the app
+
+A)When the client issues a request to "show me all products"
+
+Getting the data from the database: and displaying on the client browser
+1) Controller:But the work of connecting to the database and fetching the data is the job of the controller.
+2) Class:Products: properties:prodid,prodname,price etc:Model
+3) List<Products> is to be created in the controller and the list is to be populated(filling the data in the list) in the controller.
+4)This list is then passed to the view.
+View has to take the data (from the database--actually from controller).
+
+
+B) When the client issues a request for "Adding a new product"
+Insert-----> InsertView
+1) The page/view is presented to the client.
+2) The client fills valid data in the data entry screen and clicks Save.
+3) After "save" click, the controller will take the data from the view/page
+4)It will validate the data received and send this data to the database using a Insert query.
+
+
+
+Update------> UpdateView
+Delete------> DeleteView
+ShowAllProducts----->ListofPRoducts
+FindProduct-----showProduct
+**********************************************************************************
+
+Files in MVC App
+1) Web.config: configuration file for the web app
+2) packages.config: if any addon packages are required to install, it will keep a record specifying the name and version, so that whenever u host your app
+on the server(production server) these packages will be intalled on the server to have uninterrupted services working for you.
+3)Global.asax: Application level events, file name never changes, used for initializing the app, stopping the app,session start,session end,etc and handle any events related to the app.
+Personalization folders:each user of the app
+4) Scripts: all .js files
+5) Content: all .css files
+6) App_Start: All Startup files requierd for startingt the app 
+7) App_Data: All databases scripts
+8) Connected Services: IF the app is connected to other services on the web
+-------------------------------------------------------------------
+Home:
+Products                       Categories                Customers
+AddNewPRoduct    		AddNewCategory            Login
+ShowList           ......				  Register	
+FindProduct     
+UpdateProduct   
+DeleteProduct(Menu Items/Hyperlinks)
+
+
+
+
+
+CustomersController:
+When u click the link/menu item: Action is performed, it gives u a result of the click action.
+
+ActionResult : The output of a action is called as ActionResult
+ActionREsult is a abstract class,so it can return the result as a string,void,view, anotheraction in the same controller,
+another action in a different controller. 
+
+ActionResult Login
+{
+
+
+}
+
+ActionResult Register
+{
+
+
+}
+--------------------------------
+
+1)client/browser issues a request for the action using the following syntax: 
+
+controllername/actionname
+
+
+cleint says: GET ME THE LOGIN action
+
+
+
+
+
+
+
+
+
+
+
+
+
