@@ -54,6 +54,23 @@ namespace WebApplication1.Controllers
 
 
 
+        public ActionResult PendingProductsToDeliver()
+        {
+            List<ElectronicProducts> pendingProducts = new List<ElectronicProducts>();
+            pendingProducts.Add(new ElectronicProducts { Productid = 9, ProductName = "Tablets", Price = 90000 });
+            pendingProducts.Add(new ElectronicProducts { Productid = 17, ProductName = "Mobiles", Price = 20000 });
+            pendingProducts.Add(new ElectronicProducts { Productid = 129, ProductName = "TVs", Price = 30000 });
+
+            ViewData["PendingProductList"] = pendingProducts;
+            return View();
+
+
+
+
+        }
+
+
+
 
 
 

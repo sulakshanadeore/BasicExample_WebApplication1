@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.ElectronicProducts
+
+@{
+    ViewBag.Title = "PendingProductsToDeliver";
+}
+
+<h2>PendingProductsToDeliver</h2>
+
+<table class="table table-hover">
+    
+    <thead>
+        <tr>
+            <th>ProductID    </th>
+            <th>Name</th>
+            <th>Price(Rs)</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+
+
+        @foreach (WebApplication1.Models.ElectronicProducts item in  (IEnumerable<WebApplication1.Models.ElectronicProducts>)ViewData["PendingProductList"])
+        {
+            <tr>
+                <td>@item.Productid</td>
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+            </tr>
+       }
+    </tbody>
+</table>
+
+<hr/>
+<table class="table table-hover">
+    
+    <thead>
+        <tr>
+            <th>ProductID    </th>
+            <th>Name</th>
+            <th>Price(Rs)</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+
+
+        @foreach (WebApplication1.Models.ElectronicProducts item in (List<WebApplication1.Models.ElectronicProducts>)ViewData["PendingProductList"])
+        {
+            <tr>
+                <td>@item.Productid</td>
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

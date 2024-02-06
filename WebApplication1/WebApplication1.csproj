@@ -189,6 +189,7 @@
     <Content Include="Views\Products\ProductList.cshtml" />
     <Content Include="Views\Products\ShowNumbers.cshtml" />
     <Content Include="Views\Products\AvailableProducts.cshtml" />
+    <Content Include="Views\Products\PendingProductsToDeliver.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
