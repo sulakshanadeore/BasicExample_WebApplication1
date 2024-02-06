@@ -27,5 +27,67 @@ namespace WebApplication1.Controllers
         
         
         }
+
+
+        public ActionResult ShowNumbers()
+        {
+
+            List<int> intList = new List<int>() {1,2,3,4,5,6,7,8,9,10 };
+            ViewBag.data = intList;
+            return View();
+
+        }
+
+        public ActionResult AvailableProducts()
+        {
+            List<ElectronicProducts> available = new List<ElectronicProducts>();
+            available.Add(new ElectronicProducts {Productid=10, ProductName="Laptops",Price=90000 });
+            available.Add(new ElectronicProducts { Productid = 11, ProductName = "Printers", Price = 20000 });
+            available.Add(new ElectronicProducts { Productid = 12, ProductName = "Scanner", Price = 30000 });
+
+            ViewBag.availableProdList = available;
+            return View();
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

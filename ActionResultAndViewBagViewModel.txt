@@ -1,0 +1,56 @@
+
+
+MVC--- Model View Controller
+Separation of concerns
+Architectural Design Pattern
+
+1) Route Config: Which has your default route defined:
+Controller/Action/{id}---optional
+Home/Index
+
+Action---->
+ControllerName/ActionName
+Customers/Login
+
+
+	ActionResult-->abstract
+1)ContentResult---String
+2)ViewResult
+3)RedirectToActionResult
+4) RedirectPermanant----> opening  a url
+
+
+Customers
+Login
+Register
+
+The default action verb GET(HTTPGet)
+--------------------------------------------------------
+The name of the parameter in the post action should match the name parameter of the input type in the form post action
+------------------------------------------
+Hyperlink--<a>------HtmlHelper:
+Razor engine of mvc
+(fast)
+Views
+Shared
+_Layout.cshtml
+
+@Html.ActionLink("Display text","Action Name","Name of Controller where that action is")
+
+
+"Customers Login","Login","Customers" 
+
+"New Customers REgister here","Register","Customers"
+
+------------------------------------------------------------
+
+Ways to pass data from controller to view:
+1) ViewModel
+2) ViewBag: It uses C# feature, and it can be used to pass any type of data from the controller to the view.
+The data may be simple integer value list or some complex collection like list of products as well.
+3) ViewData
+
+
+
+
+
